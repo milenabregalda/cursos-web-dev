@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Milena Bregalda">
+    <meta name="description" content="Esta página contém tags extras de HTML">
+    <title>Extras</title>
+    <link rel="icon" href="html5.png" type="image/x-icon">
+</head>
+
+<body>
+    <h1>Extras</h1>
+
+    <!-- Áudio/música no HTML: -->
+    <h2>Exemplo 1</h2>
+    <audio controls autoplay muted loop>
+        <!-- Controls para aparecerem os controles (play, pause, etc.) -->
+        <!-- Autoplay para abrir a página tocando a música (não recomendado, no máximo se também estiver mudo) -->
+        <!-- Muted para áudio ficar mudo -->
+        <!-- Loop para ficar repetindo sozinho -->
+        <source src="exemplodemusica.mp3" type="audio/mpeg"> <!-- A áudio principal é do tipo mp3 -->
+        <source src="exemplodemusica.wav" type="audio/wav">
+        <!-- Caso o mp3 não for suportado pelo navegador ou não estiver disponível, tocará o wav no lugar -->
+    </audio>
+
+    <!-- Exemplo mais simples de áudio: -->
+    <h2>Exemplo 2</h2>
+    <audio controls>
+        <source src="exemplodemusica2.mp3" type="audio/mpeg">
+    </audio>
+
+    <br>
+
+    <!-- Vídeo: -->
+    <h2>Exemplo 3</h2>
+    <video width="500" controls autoplay muted loop> <!-- Tags iguais às de áudio; width não deve incluir px, apenas número -->
+        <source src="exemplodevideo.mp4" type="video/mp4"> <!-- Vídeo mp4 -->
+        <source src="exemplodevideo.webm" type="video/webm"> <!-- Se não estiver disponível, vai abrir o webm -->
+    </video>
+
+    <br>
+
+    <!-- Texto formatado: -->
+    <h2>Exemplo 4</h2>
+    <pre>
+        Este é um texto
+        que preserva 
+        os espaçamentos 
+        e quebras de linha.
+        
+        Por exemplo:
+            - Lista com indentação
+            - Preservando espaços
+    </pre>
+</body>
+
+</html>

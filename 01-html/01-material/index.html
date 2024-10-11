@@ -1,0 +1,453 @@
+<!DOCTYPE html> <!-- Declaração do tipo do documento -->
+<html lang="pt-BR"> <!-- Toda página html começa e termina com essa tag -->
+<!-- Lang define que a língua desta página é o português brasileiro -->
+
+
+<!-- Este projeto foi criado a partir do curso "Learn HTML – Full Tutorial for Beginners (2022)" do professor
+ Dave Gray no YouTube. Você pode encontrá-lo:
+ 1. No canal freeCodeCamp.org: https://www.youtube.com/watch?v=kUMe1FH4CHE
+ 2. No canal do professor Dave Gray: https://www.youtube.com/watch?v=mJgBOIoGihA
+ * Link para validar páginas HTML (Validate by File Upload): https://validator.w3.org -->
+
+
+<!-- As tags mais importantes da página HTML são head e body: -->
+
+<head> <!-- Aqui ficam os dados sobre a página que não aparecem nela (metadados)-->
+    <meta charset="UTF-8">
+    <!-- Codificação de caracteres mais comum da World Wide Web (também fez os acentos do Português aparecerem corretamente) -->
+    <meta name="author" content="Milena Bregalda">
+    <!-- Define que eu sou a autora da página (aparece em sites de busca) -->
+    <meta name="description" content="Esta página contém os meus aprendizados em HTML">
+    <!-- Define uma descrição breve da página (também aparece em sites de busca) -->
+    <title>A Minha Página</title> <!-- Título da página (que fica na aba do navegador) -->
+    <link rel="icon" href="html5.png" type="image/x-icon"> <!-- Define o ícone da página -->
+    <link rel="stylesheet" href="main.css" type="text/css"> <!-- CSS mínimo para as tabelas aparecerem melhor -->
+</head>
+
+<body> <!-- Aqui ficam os elementos que são vistos na página -->
+    <header> <!-- Tag semântica de cabeçalho para a toda página;
+        também pode ter vários headers para vários posts de blog, rede social, etc. -->
+        <h1>Olá, mundo!</h1> <!-- O título principal, é o maior do HTML e só pode ter um por página -->
+        <!-- É uma tag semântica e é boa prática ter só até o h3 por página -->
+
+        <hr> <!-- Desenha uma linha horizontal -->
+
+        <nav aria-label="navegacao-principal"> <!-- Tag semântica para área de navegação-->
+            <!-- Se tiver mais de uma nav, precisam ter nome para acessibilidade; 
+             se quiser ligar a um h2 na nav (opcional), usar aria-labelledby e um id no h2 -->
+
+            <ul> <!-- Listas também são tags semânticas -->
+                <li>
+                    <a href="#html">Aprendendo HTML</a>
+                    <!-- Link para uma seção desta mesma página, com # e id que dei para ela -->
+                </li>
+                <li>
+                    <a href="#ferias">Planejando umas férias</a>
+                </li>
+                <li>
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main> <!-- Tag semântica para o conteúdo principal da página (só pode ter uma por página) -->
+        <article id="html">
+            <!-- Tag semântica para conteúdo independente (blogs, notícias, postagens); Aqui é sobre HTML e tem um id para referenciar depois. -->
+            <h2>Estou pronta para aprender HTML</h2>
+            <!-- Subtítulo: hierarquia de h1 até h6, também ajuda a tecnologia assistiva -->
+            <p>Esta é uma das minhas primeiras páginas web.</p> <!-- Um parágrafo -->
+
+            <section> <!-- Tag semântica para coisas mais genéricas, e para agrupar conteúdo tematicamente relacionado 
+                (capítulos de um livro, partes de uma página ou diferentes tópicos em um artigo, etc.) -->
+                <h3>HTML5</h3> <!-- Título desta section dentro do article -->
+                <!-- Adicionando imagens: -->
+                <img src="img/html_logo_300x300.png" alt="HTML5 Logo" title="Estou aprendendo HTML5" width="300"
+                    height="300">
+                <!-- - src pro caminho da imagem;
+                    - alt é o texto alternativo (que a tecnologia assistiva vai ler para cegos e o texto que aparece
+                    se a imagem não carregar por algum motivo)
+                    - title aparece quando passa-se o mouse sobre a imagem, é para informações complementares, mas o leitor de tela não vai ler isso,
+                    por isso não deve-se colocar nada de muito importante ali;
+                    - width e height voltaram a ser usados recentemente dentro do HTML e são indicados. Se botar só largura (width) a altura vai automaticamente ser
+                    definida com um tamanho que não distorcerá a imagem; ela ficará com proporções mantidas, porém tamanho menor; mas é melhor definir os dois
+                    - Tag img não precisa de tag de fechamento no HTML5 puro -->
+                <figure>
+                    <!-- Figure (mais abaixo) também pode ser usada para código: -->
+                    <figcaption>Um exemplo de código HTML5</figcaption>
+                    <p>
+                        <code> <!-- Tag para mostrar códigos -->
+                                &lt;h1&gt;Olá, mundo!&lt;/h1&gt;
+                        <!-- Entidades porque se colocasse <h1> e relacionados direto ele não mostraria o texto do código na página,
+                                    e sim viraria parte do código do site -->
+                        </code>
+                    </p>
+                </figure>
+            </section>
+
+            <section>
+                <h3>Minha rotina</h3>
+                <p>Deixa eu te contar como...
+                    <br>...&nbsp;&nbsp;&nbsp;Eu estou aprendendo desenvolvimento web, começando com <abbr
+                        title="Hypertext Markup Language">HTML</abbr>;
+                    <!-- br: Quebra de linha (espaço entre linhas é menor do que dois parágrafos separados) -->
+                    <!-- abbr: cria um tool tip text que o usuário pode ver se colocar o mouse na sigla, mas não é acessível para leitores de tela -->
+                    <br>...&nbsp;&nbsp;&nbsp;Eu me planejo para estudar...
+                    <!-- &nbsp: Entidade que coloca espaço em branco que HTML aceita deixar aparecer na página -->
+                    <br>...&nbsp;&nbsp;&nbsp;E estou me divertindo com isso.
+                    <br>...&nbsp;&nbsp;&nbsp;<a href="https://pt.wikipedia.org/wiki/HTML">Página da Wikipédia sobre
+                        HTML</a>
+                    <!-- Link com referência absoluta: tem o endereço completo para a página que vamos (na internet) -->
+                    <!-- Links com referência relativa lá nos metadados. Isso porque os arquivos estão no mesmo lugar que está este index.html,
+                        então não é necessário colocar o caminho inteiro deles para serem encontrados -->
+                    <br>
+                </p>
+
+                <p>Além disso...</p>
+                <ol> <!-- Lista ordenada -->
+                    <li>Gosto de organizar as coisas</li> <!-- Itens da lista -->
+                    <li>Uma página organizada fica mais fácil de entender</li>
+                    <!-- O espaço entre as linhas é parecido com uma quebra de linha, não como um novo parágrafo, e tem indentação -->
+                </ol>
+                <aside> <!-- Tag semântica para texto complementar, menos importante que main ou article -->
+                    <details>
+                        <!-- Tag semântica, aparece o summary e tem uma setinha para o usuário clicar se ele quiser ver a informação escondida -->
+                        <!-- Exemplos para uso: detalhes de produto, garantia, quiz, etc.-->
+                        <summary>Adivinhe o <mark>número de horas</mark> que eu programo por dia</summary>
+                        <!-- Mark para destacar texto -->
+                        <p>Eu começo às <time datetime="09:00">9h</time> da manhã e faço isso pelo menos <time
+                                datetime="PT3H">três horas</time> por dia, cinco dias por semana.</p>
+                        <!-- Tags semânticas datetime para que o navegador e os leitores de tela saibam que aquela informação é sobre data e hora -->
+                    </details>
+                </aside>
+
+                <br>
+
+                <!-- Tabelas (usado CSS mínimo para colocar bordas sem usar tags em desuso): -->
+                <!-- Diferente de outros elementos HTML, a tabela não ocupa toda a largura da página, ela só vai até onde os dados terminarem -->
+                <table>
+                    <caption>Minha Agenda Diária</caption>
+                    <!-- Tag semântica para dizer do quê é a tabela (acessibilidade - cegos podem saber se querem continuar navegando por essa tabela ou não sem o mouse)
+                         Não precisa sempre adicionar tags semânticas nas tabelas (exemplo: tabela bem simples), mas no geral é bom adicionar -->
+                    <thead> <!-- Tag semântica, esse é o cabeçalho da tabela -->
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th scope="col">Hora</th> <!-- Título da tabela (table header) -->
+                            <th scope="col">Atividade</th>
+                            <!-- Col - tag semântica para dizer que esse título tem informações relacionadas às colunas-->
+                        </tr>
+                    </thead>
+                    <tbody> <!-- Tag semântica, esse é o corpo da tabela -->
+                        <tr>
+                            <th scope="row">Manhã</th> <!-- Título aqui também para com detalhes horizontais -->
+                            <!-- Row - tag semântica para dizer que esse título tem informações relacionadas às colunas -->
+                            <!-- Também pode usar id e headers ao invés de row, mas row é melhor e mais simples de fazer -->
+                            <td>
+                                <time datetime="09:00">9h</time>-<time datetime="12:00">12h</time>
+                                <!-- O hífen entre as tags time que faz aparecer de hora tal até hora tal-->
+                            </td>
+                            <td>Ir para o curso</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Meio-dia</th>
+                            <td>
+                                <time datetime="12:00">12h</time>-<time datetime="13:00">13h</time>
+                            </td>
+                            <td>Almoçar</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Tarde</th>
+                            <td>
+                                <time datetime="13:00">13h</time>-<time datetime="17:00">17h</time>
+                            </td>
+                            <td>Estudar para os cursos online</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Noite</th>
+                            <td rowspan="2">Todos os outros momentos</td>
+                            <!-- Rowspan faz essa informação ficar em 2 linhas da página ao invés de só uma -->
+                            <td>Tempo livre</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Madrugada</th>
+                            <td>Dormir</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <!-- Tag semântica, esse é o rodapé da tabela; pode ser usado para valores totais de algo, por exemplo -->
+                        <tr>
+                            <td colspan="3">E é isso que eu faço todo dia, 5 dias por semana.
+                                Comer, dormir, programar... e recarregar as energias!</td>
+                            <!-- Colspan faz essa informação ficar em 3 colunas da página ao invés de só uma -->
+                        </tr>
+                    </tfoot>
+                </table>
+                <br>
+            </section>
+        </article>
+
+        <hr> <!-- Desenha linha horizontal e é tag semântica que indica mudança de tópico/assunto no site -->
+
+        <article id="ferias">
+            <h2>Estou planejando umas férias</h2>
+            <p>Tenho estudado bastante, e acho que preciso <em>mesmo</em> de umas férias.</p>
+            <!-- A palavra "mesmo" aparece em itálico e comunica ao navegador e tecnologias assistivas que esse texto tem ênfase -->
+            <p>Qualquer lugar divertido seria legal.</p>
+
+            <section>
+                <h3>Lugares que eu gostaria de visitar</h3>
+                <ul> <!-- Lista desordenada -->
+                    <li>
+                        <p>Têm muitos lugares para escrever em um parágrafo, mas Londres seria um deles.</p>
+                        <!-- As listas podem ter parágrafos dentro também (assim, o espaço entre uma linha e outra fica maior)-->
+                    </li>
+                    <li> <!-- Pode quebrar a linha dentro de tags (exemplo: se conteúdo for grande), se abrem e fecham corretamente vai funcionar igual -->
+                        <p>Esse é o endereço do Big Ben:</p>
+                        <address>
+                            Big Ben<br>
+                            <!-- Define que é um endereço e deixa itálico, também tem importância semântica pra tecnologias assistivas -->
+                            Westminster, London SW1A 0AA<br>
+                            Reino Unido
+                        </address>
+                    </li>
+                    <li>
+                        <p>O Caribe também parece ser legal.</p>
+                        <figure>
+                            <!-- Para agrupar um conteúdo independente com uma descrição, esse conteúdo (aqui uma imagem) tem indentação para a direita -->
+                            <img src="img/caribbean.jpg" alt="Praia do Caribe"
+                                title="Talvez eu também queira visitar o Caribe." width="400" height="225"
+                                loading="lazy">
+                            <!-- Loading lazy faz com que a imagem só seja carregada quando o usuário estiver perto de ver ela na página, o que é muito bom para performance.
+                                O padrão é loading eager (todas as imagens carregam quando a página é carregada) -->
+                            <figcaption>Escape tropical para a Praia do Caribe</figcaption>
+                            <!-- Legenda (descrição) que o navegador e as tecnologias assistivas entendem que está ligada à imagem do Caribe
+                                As figcaption sempre devem ser ou no início ou no final da figure, nunca no meio -->
+                        </figure>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Não usar essas tags por enquanto (só depois com CSS), porque elas não têm significado semântico para o HTML e acessibilidade: -->
+            <!-- <div></div>
+                <span></span> -->
+
+            <!-- br*150 - faz com que automaticamente sejam gerados quantos br o desenvolvedor quiser (aqui 150) -->
+
+            <!-- Sites legais para imagens que podem ser utilizadas gratuitamente:
+                - unsplash.com
+                - pexels.com
+                - gratisography
+                - pixabay.com
+
+                Outros:
+                - placeholder.com (para imagens placeholder do tamanho desejado)
+                - tinypng (para comprimir imagens mantendo qualidade)
+            -->
+
+            <h3>Lugares que eu não quero visitar</h3>
+            <dl> <!-- Lista de definição: usadas para quando precisar apresentar termos acompanhados
+                    de suas definições ou descrições (exemplos: glossários, FAQs, e especificações técnicas)-->
+                <dt>Polo Norte</dt>
+                <dd>Eu ouvi falar que lá é <strong>muito</strong> frio!</dd>
+                <!-- "muito" aparece em negrito e comunica ao navegador e tecnologias assistivas que o texto é importante -->
+
+                <dt>Polo Sul</dt> <!-- O termo (palavra, substantivo, etc.), fica para a esquerda -->
+                <dd>Também é frio.</dd>
+                <!-- A definição (significado) do termo ou a sua descrição, fica mais à direita -->
+
+                <dt>Topo de montanha</dt>
+                <dd>Também é frio.</dd>
+            </dl>
+        </article>
+
+        <hr>
+
+        <article id="contato">
+            <h2>Contato</h2>
+            <p>Adoraria receber a sua mensagem!</p>
+
+            <form> <!-- action="https://httpbin.org/get" method="get" -->
+                <!-- Action normalmente enviaria informações do formulário para nosso servidor,
+                     mas acima foi colocado um site de exemplo que mostra as informações enviadas -->
+                <fieldset>
+                    <!-- Fieldset agrupa campos de formulário em uma seção (com borda ao redor) -->
+                    <legend>Informações pessoais</legend> <!-- Título para o grupo de campos -->
+                    <p>
+                        <label for="nome">Nome:</label>
+                        <!-- Atributo For do Label precisa ser o mesmo de id do Input para associá-los (name vai pro servidor) -->
+                        <input type="text" name="nome" id="nome" placeholder="Joelma" autocomplete="on" required
+                            autofocus> <!-- input:text atalho -->
+                        <!-- Tipo text para campo de texto -->
+                        <!-- É bom (não obrigatório) que name e id de input sejam a mesma coisa, e que usem camelCase -->
+                        <!-- Name é como a informação é identificada no servidor -->
+                        <!-- Autocomplete ligado vai lembrar e sugerir inputs que o usuário já digitou antes -->
+                        <!-- Required para que seja obrigatório preencher um campo antes de enviar o formulário -->
+                        <!-- Autofocus para que, quando a página abrir, foque neste campo (só um por página, de preferência no início dela) -->
+                    </p>
+                    <p>
+                        <label for="sobrenome">Sobrenome:</label>
+                        <input type="text" name="sobrenome" id="sobrenome" placeholder="Da Silva" autocomplete="on"
+                            required>
+                        <!-- Input é uma tag que não fecha com \> como outras tags -->
+                    </p>
+                    <p>
+                        <label for="senha">Senha:</label>
+                        <input type="password" name="senha" id="senha" placeholder="O seu segredo" required>
+                        <!-- Tipo password para campo de senha (bolinhas escondendo texto), placeholder aparece o texto -->
+                        <!-- Não funciona autocomplete em senha por segurança -->
+                    </p>
+                    <p>
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" name="telefone" id="telefone" placeholder="5555555555"
+                            pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+                        <!-- Tipo tel para telefone (em celulares, aparece teclado totalmente numérico para usuário digitar, diferente de text/number) -->
+                        <!-- Pattern para que só um telefone que é válido de acordo com um padrão especificado seja aceito
+                            (no exemplo acima, telefone com números de 0 a 9 três vezes e depois quatro vezes - padrão americano) -->
+                    </p>
+                    <p>
+                        <label for="decada">Década favorita:</label>
+                        <input type="number" name="decada" id="decada" min="1950" max="2020" step="10" value="1980">
+                        <!-- Number tipo de caixa com setinhas para cima e para baixo para mudar valores -->
+                        <!-- Primeira década 1950, a última 2020, valores mudam de 10 em 10 (anos), o valor que aparece por padrão é 1980 -->
+                    </p>
+
+                    <!-- Tag select para criar caixa de seleção -->
+                    <!-- Jeito 1 de caixa de seleção (caixa simples que, quando clica, mostra várias opções): -->
+                    <p>
+                        <label for="cafe1">Café favorito 1:</label>
+                        <select name="cafe1" id="cafe1">
+                            <!-- Coloquei name cafe1 para não atrapalhar os exemplos mais para baixo (deve ser único) -->
+                            <option value="cafe-normal">Café normal</option>
+                            <!-- Option para definir opções de select -->
+                            <!-- Value para servidor, e não escrever nome de value com espaços -->
+                            <option value="cafe-gelado">Café gelado</option>
+                            <option value="latte" selected>Latte</option>
+                            <!-- Colocar Selected para mudar a opção que é mostrada (por padrão, seria a primeira) -->
+                            <option value="cappuccino">Cappuccino</option>
+                            <option value="cortado">Cortado</option>
+                            <option value="americano">Americano</option>
+                            <option value="outro">Outro café</option>
+                            <!-- Cada value de atributo também deve ser único -->
+                        </select>
+                    </p>
+
+                    <!-- Tag select para criar caixa de seleção -->
+                    <!-- Jeito 2 de caixa de seleção (com categorias de seleção e podemos selecionar várias opções): -->
+                    <p>
+                        <label for="cafe2">Café favorito 2:</label>
+                        <select name="cafe2" id="cafe2" multiple size="5">
+                            <!-- Multiple para poder selecionar várias opções -->
+                            <!-- Size para quantas linhas de opções tem na caixa de seleção (incluindo categorias) -->
+                            <optgroup label="Cafés"> <!-- Categoria de opções de cafés -->
+                                <option value="cafe-normal">Café normal</option>
+                                <option value="cafe-gelado">Café gelado</option>
+                            </optgroup>
+                            <optgroup label="Bebidas de espresso"> <!-- Categoria de opções de bebidas de espresso -->
+                                <option value="latte" selected>Latte</option>
+                                <option value="cappuccino">Cappuccino</option>
+                                <option value="cortado">Cortado</option>
+                                <option value="americano">Americano</option>
+                            </optgroup>
+                            <option value="outro-cafe">Outro</option>
+                            <!-- Para não repetir com value outro, fora de categorias -->
+                        </select>
+                    </p>
+
+                    <!-- Jeito 3 com lista de dados, parecida com caixa de seleção
+                         (o usuário escreve e pesquisa opções pré-definidas para selecionar, ou coloca o que quer): -->
+                    <p>
+                        <label for="cafe3">Café favorito 3:</label>
+                        <input type="text" name="cafe3" id="cafe3" list="lista-cafe">
+                        <datalist id="lista-cafe">
+                            <option value="Café gelado"></option> <!-- Aqui, só colocar a opção uma vez -->
+                            <option value="Latte"></option>
+                            <option value="Cappuccino"></option>
+                            <option value="Cortado"></option>
+                            <option value="Americano"></option>
+                            <option value="Outro"></option>
+                        </datalist>
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Qual é a sua comida favorita?</legend>
+                    <p>
+                        <!-- Radio buttons: -->
+                        <input type="radio" name="comida" id="tacos" value="tacos">
+                        <label for="tacos">Tacos</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="comida" id="pizza" value="pizza">
+                        <!-- "comida" deve ser o mesmo para usuário só poder selecionar uma das três opções -->
+                        <label for="pizza">Pizza</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="comida" id="outra" value="outra">
+                        <label for="outra">Outra</label> <!-- Aqui poderia repetir "outro" porque não é id -->
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Você tem Pets?</legend>
+                    <p>
+                        <!-- Caixa de seleção (pode selecionar várias opções): -->
+                        <input type="checkbox" name="pets" id="cachorro" value="cachorro">
+                        <label for="cachorro">Cachorro</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" name="pets" id="gato" value="gato">
+                        <!-- Também colocar o mesmo name (pets) para todas as opções -->
+                        <label for="gato">Gato</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" name="pets" id="peixe" value="peixe">
+                        <label for="peixe">Peixe</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" name="pets" id="outroPet" value="outroPet">
+                        <label for="outroPet">Outro Pet</label>
+                        <!-- id "outro" deve ser único, por isso outroPet aqui -->
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Me mande uma mensagem</legend>
+                    <!-- Área de texto: -->
+                    <label for="message">A sua mensagem:</label>
+                    <br>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Digite a sua mensagem aqui"></textarea>
+                    <!-- Cols define largura e rows define altura da área de texto -->
+                </fieldset>
+
+                <br>
+
+                <button type="submit">Submit</button> <!-- Botão de enviar normal -->
+                <button type="submit">Post</button> <!-- formaction="https://httpbin.org/post" formmethod="post" -->
+                <!--  Botão de enviar que utiliza post e envia para servidor diferente do que está definido no início do form -->
+                <button type="reset">Reset</button>
+            </form>
+        </article>
+    </main>
+
+    <hr>
+
+    <footer> <!-- Tag semântica para o cabeçalho, também pode ter para a página inteira ou para cada post em um site -->
+        <p>
+            &lt;&lt;&lt; &copy; <a href="about.html">Milena Bregalda</a> &gt;&gt;&gt;
+        </p>
+        <!-- Entidade do símbolo "<"; entidade do símbolo de Copyright; entidade do símbolo ">" -->
+        <!-- Link para outra página html (about) -->
+        <!-- Títulos para links devem ser curtos, do assunto da página e não "clique aqui", "isto é um link", o link inteiro (https://www.google.com/), etc. -->
+        <p><a href="#">Voltar ao topo</a></p>
+        <!-- A # sem um id específico faz ir para o início da página.
+            Além disso, os # com id (ou sem, nesse caso) aparecem no final do link da página no navegador. -->
+    </footer>
+</body>
+
+</html>

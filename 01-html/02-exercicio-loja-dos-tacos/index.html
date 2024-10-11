@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport fica abaixo de UTF-8 -->
+    <title>Loja dos Tacos</title>
+    <meta name="author" content="Milena Bregalda">
+    <meta name="description" content="Aqui você encontra os melhores tacos do Brasil e do mundo.">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <h1>Sejam bem-vindos à Loja dos Tacos</h1>
+
+        <nav aria-label="navegacao-principal">
+            <ul>
+                <li><a href="#sobre-nos">Sobre nós</a></li>
+                <li><a href="#nosso-menu">Nosso menu</a></li>
+                <li><a href="hours.html">Horário da loja</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+        </nav>
+
+        <figure>
+            <img src="images/tacos_and_drink_400x267.png" alt="Tacos e uma bebida" width="400" height="267">
+            <!-- É importante colocar largura e altura -->
+            <figcaption>Tacos e uma bebida</figcaption>
+        </figure>
+    </header>
+
+    <hr>
+
+    <main>
+        <article id="sobre-nos"> <!-- Aqui o id não tem hashtag -->
+            <h2>Sobre nós</h2>
+            <p>A <abbr title="Loja dos Tacos">LDT</abbr> foi fundada em 2024. Nossa loja foi construída a partir de um
+                <strong>enorme</strong> amor por tacos 🌮🌮🌮😋. Esperamos que seja um lugar único e interessante na
+                nossa pequena
+                cidade!
+            </p>
+
+            <aside> <!-- Tema relacionado ao conteúdo principal (section) x informações adicionais (aside) -->
+                <h3>Curiosidade</h3>
+                <details>
+                    <summary>Onde surgiu o taco?</summary>
+                    <p>O taco surgiu no México, onde era consumido pelos povos indígenas há mais de 500 anos.</p>
+                    <!-- Não preciso colocar tag datetime aqui, e poderia utilizar tag cite com href para colocar fonte -->
+                </details>
+            </aside>
+        </article>
+
+        <hr>
+
+        <article id="nosso-menu">
+            <h2>Nosso menu</h2>
+
+            <table>
+                <caption>Nossos tacos</caption>
+
+                <thead>
+                    <tr> <!-- Tinha esquecido de colocar a tag de linha da tabela aqui -->
+                        <th scope="col">Tacos</th>
+                        <th scope="col"><abbr title="Quantidade">Qtd</abbr></th> <!-- Colocar tag de abreviações -->
+                        <th scope="col">Preço</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row" rowspan="3">Crocante</th>
+                        <td>1</td>
+                        <td>R$ 1,50</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>R$ 2,50</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>R$ 2,50</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row" rowspan="3">Macio</th>
+                        <td>1</td>
+                        <td>R$ 2,00</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>R$ 3,50</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>R$ 4,50</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="3">Batatas fritas e salsa R$ 2,00</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </article>
+    </main>
+
+    <br>
+
+    <footer>
+        <p><a href="#">Voltar ao topo</a></p>
+
+        <hr>
+        <p>Copyright &copy; Loja dos Tacos</p>
+    </footer>
+</body>
+
+</html>

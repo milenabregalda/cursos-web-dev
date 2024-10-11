@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport fica abaixo de UTF-8 -->
+    <title>Loja dos Tacos - Contato</title>
+    <meta name="author" content="Milena Bregalda">
+    <meta name="description" content="Aqui você encontra os melhores tacos do Brasil e do mundo.">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <h1>Entre em contato</h1>
+
+        <nav aria-label="navegacao-principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html#sobre-nos">Sobre nós</a></li>
+                <!-- Chama a página HTML e o id junto para redirecionar para essa outra página em uma seção específica -->
+                <li><a href="index.html#nosso-menu">Nosso menu</a></li>
+                <li><a href="hours.html">Horário da loja</a></li>
+            </ul>
+        </nav>
+
+        <figure>
+            <img src="images/tacos_close_up_400x260.png" alt="Tacos da loja" width="400" height="260">
+            <figcaption>Tacos da loja</figcaption>
+        </figure>
+    </header>
+
+    <main>
+        <article id="formulario-de-contato">
+            <h2>Formulário de contato</h2>
+
+            <form>
+                <fieldset>
+                    <legend>Nos mande uma mensagem</legend>
+                    <p>
+                        <label for="nome">Nome:</label>
+                        <input type="text" name="nome" id="nome" placeholder="Seu nome" autofocus required>
+                    </p>
+                    <p>
+                        <label for="e-mail">E-mail:</label>
+                        <input type="email" name="e-mail" id="e-mail" placeholder="Seu e-mail" required>
+                    </p>
+                    <p>
+                        <label for="mensagem">A sua mensagem:</label>
+                        <br>
+                        <textarea name="mensagem" id="mensagem" cols="25" rows="10"
+                            placeholder="Digite a sua mensagem aqui" required></textarea>
+                    </p>
+                </fieldset>
+
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpar</button>
+            </form>
+        </article>
+
+        <br>
+
+        <article id="nossa-localizacao">
+            <h2>Nossa localização</h2>
+
+            <address>
+                Rua dos Tacos, 000<br>
+                Cidade dos Tacos, Estado
+                <br><br>
+                Telefone: <a href="tel:+5511912345678">+55 00 91234-5678</a>
+                <!-- É boa prática colocar telefone dentro de tag address -->
+            </address>
+        </article>
+    </main>
+
+    <footer>
+        <p><a href="#">Voltar ao topo</a></p>
+
+        <hr>
+        <p>Copyright &copy; Loja dos Tacos</p>
+    </footer>
+</body>
+
+</html>
