@@ -6,4 +6,4 @@ Este repositório é dedicado à postagem de materiais de estudo adquiridos em c
 
 1. **HTML**
    - **Curso**: [Learn HTML – Full Tutorial for Beginners (2022)](https://www.youtube.com/watch?v=kUMe1FH4CHE)
-   - **Descrição**: Curso introdutório sobre HTML, cobrindo os fundamentos da estruturação de páginas web.
+   - **Descrição**: Curso introdutório sobre HTML, cobrindo os fundamentos da estruturação de páginas web. Este curso é ensinado por Dave Gray e está disponível no canal do FreeCodeCamp no YouTube.
